@@ -39,7 +39,7 @@ const Carousel = ({slides, infinite}) => {
 
     //function to slide into previous slide
     const prevSlide = () => {
-        infinite ? setCurrent((prevState) => prevState === 0 ? prevState - 1 : prevState - 1) :
+        infinite ? setCurrent((prevState) => prevState === 0 ? sliderData?.length - 1: prevState - 1) :
             setCurrent((prevState) => prevState === 0 ? prevState : prevState - 1);
     };
 
